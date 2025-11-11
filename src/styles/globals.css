@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -38,8 +38,9 @@
   --sidebar-ring: hsl(140 50% 40%);
   --font-sans: ui-sans-serif, system-ui, sans-serif;
   --font-serif: ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    Liberation Mono, Courier New, monospace;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono,
+    Courier New, monospace;
   --radius: 0.5rem;
   --shadow-x: 0;
   --shadow-y: 1px;
@@ -49,16 +50,16 @@
   --shadow-color: #000000;
   --shadow-2xs: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.03);
   --shadow-xs: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.03);
-  --shadow-sm: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.05),
-    0 1px 2px -1px hsl(0 0% 0% / 0.05);
-  --shadow: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.05),
-    0 1px 2px -1px hsl(0 0% 0% / 0.05);
-  --shadow-md: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.05),
-    0 2px 4px -1px hsl(0 0% 0% / 0.05);
-  --shadow-lg: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.05),
-    0 4px 6px -1px hsl(0 0% 0% / 0.05);
-  --shadow-xl: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.05),
-    0 8px 10px -1px hsl(0 0% 0% / 0.05);
+  --shadow-sm:
+    0 1px 0.75rem 0 hsl(0 0% 0% / 0.05), 0 1px 2px -1px hsl(0 0% 0% / 0.05);
+  --shadow:
+    0 1px 0.75rem 0 hsl(0 0% 0% / 0.05), 0 1px 2px -1px hsl(0 0% 0% / 0.05);
+  --shadow-md:
+    0 1px 0.75rem 0 hsl(0 0% 0% / 0.05), 0 2px 4px -1px hsl(0 0% 0% / 0.05);
+  --shadow-lg:
+    0 1px 0.75rem 0 hsl(0 0% 0% / 0.05), 0 4px 6px -1px hsl(0 0% 0% / 0.05);
+  --shadow-xl:
+    0 1px 0.75rem 0 hsl(0 0% 0% / 0.05), 0 8px 10px -1px hsl(0 0% 0% / 0.05);
   --shadow-2xl: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.13);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
@@ -99,8 +100,9 @@
   --sidebar-ring: hsl(140.3478 50.2183% 44.902%);
   --font-sans: ui-sans-serif, system-ui, sans-serif;
   --font-serif: ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    Liberation Mono, Courier New, monospace;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono,
+    Courier New, monospace;
   --radius: 0.5rem;
   --shadow-x: 0;
   --shadow-y: 1px;
@@ -110,16 +112,16 @@
   --shadow-color: #000000;
   --shadow-2xs: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.1);
   --shadow-xs: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.1);
-  --shadow-sm: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.2),
-    0 1px 2px -1px hsl(0 0% 0% / 0.2);
-  --shadow: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.2),
-    0 1px 2px -1px hsl(0 0% 0% / 0.2);
-  --shadow-md: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.2),
-    0 2px 4px -1px hsl(0 0% 0% / 0.2);
-  --shadow-lg: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.2),
-    0 4px 6px -1px hsl(0 0% 0% / 0.2);
-  --shadow-xl: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.2),
-    0 8px 10px -1px hsl(0 0% 0% / 0.2);
+  --shadow-sm:
+    0 1px 0.75rem 0 hsl(0 0% 0% / 0.2), 0 1px 2px -1px hsl(0 0% 0% / 0.2);
+  --shadow:
+    0 1px 0.75rem 0 hsl(0 0% 0% / 0.2), 0 1px 2px -1px hsl(0 0% 0% / 0.2);
+  --shadow-md:
+    0 1px 0.75rem 0 hsl(0 0% 0% / 0.2), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+  --shadow-lg:
+    0 1px 0.75rem 0 hsl(0 0% 0% / 0.2), 0 4px 6px -1px hsl(0 0% 0% / 0.2);
+  --shadow-xl:
+    0 1px 0.75rem 0 hsl(0 0% 0% / 0.2), 0 8px 10px -1px hsl(0 0% 0% / 0.2);
   --shadow-2xl: 0 1px 0.75rem 0 hsl(0 0% 0% / 0.5);
 }
 

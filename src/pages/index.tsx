@@ -1,10 +1,14 @@
-import Navbar from '~/components/common/Navbar';
+import LandingPageLayout from "~/components/layouts/LandingPageLayout";
+import BannerHome from "~/components/views/home/BannerHome";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main>
-      <Navbar />
+    <LandingPageLayout title="Home">
+      <section>
+        <BannerHome />
+      </section>
+
       <h1>Hello World</h1>
-    </main>
+    </LandingPageLayout>
   );
 }
