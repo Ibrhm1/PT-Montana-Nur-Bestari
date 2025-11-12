@@ -1,4 +1,5 @@
 import LandingPageLayout from "~/components/layouts/LandingPageLayout";
+import AboutHome from "~/components/views/home/AboutHome";
 import BannerHome from "~/components/views/home/BannerHome";
 
 export default function HomePage() {
@@ -8,7 +9,9 @@ export default function HomePage() {
         <BannerHome />
       </section>
 
-      <h1>Hello World</h1>
+      <section>
+        <AboutHome />
+      </section>
     </LandingPageLayout>
   );
 }

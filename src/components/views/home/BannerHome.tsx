@@ -4,13 +4,12 @@ import { Card, CardContent } from "~/components/ui/card";
 
 export default function BannerHome() {
   return (
-    <main className="w-full py-5 md:py-10">
-      <div className="flex w-full justify-center rounded-lg bg-[url('/banner.jpg')] bg-cover bg-center bg-no-repeat py-40 shadow-lg">
-        <Card className="bg-sidebar m-2 w-full text-center opacity-95 shadow-2xl md:m-0 md:w-2/3">
-          <CardContent className="w-full space-y-2">
+    <main className="w-full">
+      <div className="flex h-[90vh] w-full items-center justify-center bg-[url('/banner.jpg')] bg-cover bg-center bg-no-repeat shadow-lg">
+        <Card className="bg-sidebar m-2 w-full py-10 text-center opacity-90 shadow-2xl md:m-0 md:w-2/4">
+          <CardContent className="w-full md:space-y-4">
             <div className="space-y-2">
-              <p className="text-sm md:text-base">Fresh. Natural. Reliable.</p>
-              <h1 className="text-xl font-bold uppercase lg:text-3xl">
+              <h1 className="text-xl font-bold uppercase lg:text-2xl">
                 Supplying Fresh Banana, Cassava, Moringa & Papaya Leaves
               </h1>
               <p className="text-base">

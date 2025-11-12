@@ -19,7 +19,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-sidebar flex h-16 w-full items-center justify-between border-b px-2 shadow-xl md:px-5 lg:px-10">
+    <nav className="bg-sidebar fixed z-10 flex h-16 w-full items-center justify-between border-b px-2 shadow-xl md:px-5 lg:px-10">
       <section className="flex items-center gap-2">
         <div className="-space-y-1">
           <h1 className="text-base font-bold lg:text-xl">
