@@ -1,13 +1,7 @@
-import { Mail, MapPinIcon, Phone } from "lucide-react";
 import Image from "next/image";
-import { ElementType } from "react";
+import { LIST_CONTACT_CONSTANT } from "~/constants/ListContactConstant";
 import { LIST_IMAGE_CONSTANT } from "~/constants/ListImageConstant";
 import { Separator } from "../ui/separator";
-
-type ContactInfoType = {
-  icon: ElementType;
-  info: string;
-};
 
 type ListProductsType = string[];
 
@@ -17,21 +11,6 @@ export default function Footer() {
     "Product B",
     "Product C",
     "Product D",
-  ];
-
-  const contactInfo: ContactInfoType[] = [
-    {
-      icon: MapPinIcon,
-      info: "Bekasi, West Java, Indonesia",
-    },
-    {
-      icon: Phone,
-      info: "+62 859 5809 6622",
-    },
-    {
-      icon: Mail,
-      info: "montananurbestari@gmail.com",
-    },
   ];
 
   return (
@@ -79,8 +58,8 @@ export default function Footer() {
           <h1 className="text-lg lg:text-xl">Contact</h1>
 
           <div className="space-y-2">
-            {Array.isArray(contactInfo) &&
-              contactInfo.map((contact, index) => (
+            {Array.isArray(LIST_CONTACT_CONSTANT) &&
+              LIST_CONTACT_CONSTANT.map((contact, index) => (
                 <div
                   data-slot="contact-info"
                   key={index}

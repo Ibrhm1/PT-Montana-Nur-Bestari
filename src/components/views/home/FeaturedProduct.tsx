@@ -36,37 +36,36 @@ export default function FeaturedProduct() {
       </motion.header>
 
       <section className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
-        {Array.isArray(data) ? (
-          data.map((item: ProductsType) => (
-            <motion.div
-              key={item.product_id}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: item.product_id * 0.2 }}
-              style={{ scale: scrollYProgress }}
-            >
-              <Card className="bg-card h-full -space-y-3 border-0 py-4 shadow-2xl">
-                <CardHeader className="px-4">
-                  <Image
-                    src={item.image_product}
-                    alt={item.name_product}
-                    width={200}
-                    height={400}
-                    className="h-80 w-full rounded-lg object-cover"
-                  />
-                </CardHeader>
-                <CardContent className="px-4">
-                  <h2 className="text-xl">{item.name_product}</h2>
-                  <p className="text-muted-foreground line-clamp-3 text-xs lg:text-sm">
-                    {item.description_product || "No description available."}
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))
-        ) : (
-          <p>Loading...</p>
-        )}
+        {Array.isArray(data)
+          ? data.map((item: ProductsType) => (
+              <motion.div
+                key={item.product_id}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: item.product_id * 0.2 }}
+                style={{ scale: scrollYProgress }}
+              >
+                <Card className="bg-card h-full -space-y-3 border-0 py-4 shadow-2xl">
+                  <CardHeader className="px-4">
+                    <Image
+                      src={item.image_product}
+                      alt={item.name_product}
+                      width={200}
+                      height={400}
+                      className="h-80 w-full rounded-lg object-cover"
+                      loading="lazy"
+                    />
+                  </CardHeader>
+                  <CardContent className="px-4">
+                    <h2 className="text-xl">{item.name_product}</h2>
+                    <p className="text-muted-foreground line-clamp-3 text-xs lg:text-sm">
+                      {item.description_product || "No description available."}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))
+          : null}
       </section>
 
       {Array.isArray(data) && data.length === 0 && (

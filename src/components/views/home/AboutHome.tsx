@@ -21,6 +21,7 @@ const AboutHome = () => {
         >
           About Montana Nur Bestari
         </motion.h1>
+
         <motion.p
           className="lg:text-lg"
           initial={{
@@ -39,6 +40,7 @@ const AboutHome = () => {
           fuga iure in ut.
         </motion.p>
       </section>
+
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 0.5, delay: 0.4 } }}
@@ -50,6 +52,7 @@ const AboutHome = () => {
           width={720}
           height={200}
           className="rounded-2xl object-cover lg:w-[1080px]"
+          loading="lazy"
         />
       </motion.section>
     </main>
