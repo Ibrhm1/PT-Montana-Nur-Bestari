@@ -1,18 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import { LIST_CONTACT_CONSTANT } from "~/constants/ListContactConstant";
 import { LIST_IMAGE_CONSTANT } from "~/constants/ListImageConstant";
+import listProducts from "~/data/products.json";
 import { Separator } from "../ui/separator";
 
 type ListProductsType = string[];
 
 export default function Footer() {
-  const listProducts: ListProductsType = [
-    "Product A",
-    "Product B",
-    "Product C",
-    "Product D",
-  ];
-
   return (
     <footer
       className="bg-foreground px-2 py-10 text-white md:px-5 md:py-7 lg:px-10"
@@ -43,12 +38,12 @@ export default function Footer() {
 
           <div className="space-y-2">
             {Array.isArray(listProducts) &&
-              listProducts.map((product, index) => (
+              listProducts.map((product) => (
                 <p
-                  key={index}
+                  key={product.product_id}
                   className="text-sm text-gray-500 transition-colors duration-300 hover:text-white active:text-white lg:text-base"
                 >
-                  {product}
+                  {product.name_product}
                 </p>
               ))}
           </div>
@@ -66,9 +61,12 @@ export default function Footer() {
                   className="flex items-center gap-2 text-gray-500 transition-colors duration-300 hover:text-white active:text-white"
                 >
                   <contact.icon size={16} />
-                  <p id="text-contact" className="text-sm lg:text-base">
+                  <Link
+                    href={contact?.href || " "}
+                    className="text-sm lg:text-base"
+                  >
                     {contact.info}
-                  </p>
+                  </Link>
                 </div>
               ))}
           </div>
