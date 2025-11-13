@@ -45,10 +45,11 @@ export default function Footer() {
             <Image
               src={LIST_IMAGE_CONSTANT.logo.url}
               alt={LIST_IMAGE_CONSTANT.logo.name.split("-")[1]}
-              width={50}  
+              width={50}
               height={30}
               className="aspect-square object-cover"
             />
+
             <h1 className="text-lg lg:text-xl">PT Montana Nur Bestari</h1>
           </div>
 

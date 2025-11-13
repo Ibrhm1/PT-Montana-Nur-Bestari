@@ -14,12 +14,14 @@ export default function MaintenancePage() {
         height={300}
         priority
       />
+
       <div className="space-y-1 text-center md:space-y-2">
         <h1 className="text-2xl font-semibold capitalize">
           This page is under maintenance
         </h1>
         <p className="text-lg capitalize">We&apos;ll be back soon</p>
       </div>
+
       <Button asChild variant="default">
         <Link href="/">
           <House />

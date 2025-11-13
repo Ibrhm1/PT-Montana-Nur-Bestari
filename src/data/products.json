@@ -1,0 +1,26 @@
+[
+  {
+    "product_id": 1,
+    "name_product": "Cassava Leaves",
+    "description_product": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nam, unde iusto reiciendis error illum, facilis doloremque sed odit incidunt dolor ut ab omnis beatae nihil possimus cum rem alias?",
+    "image_product": "/products/cassava-leaves.jpg"
+  },
+  {
+    "product_id": 2,
+    "name_product": "Papaya Leaves",
+    "description_product": "",
+    "image_product": "/products/papaya-leaves.jpg"
+  },
+  {
+    "product_id": 3,
+    "name_product": "Banana Leaves",
+    "description_product": "",
+    "image_product": "/products/banana-leaves.jpg"
+  },
+  {
+    "product_id": 4,
+    "name_product": "Moringa Leaves",
+    "description_product": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
+    "image_product": "/products/moringa-leaves.jpg"
+  }
+]

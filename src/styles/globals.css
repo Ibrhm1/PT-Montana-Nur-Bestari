@@ -178,6 +178,7 @@
   --shadow-2xl: var(--shadow-2xl);
 }
 
+/* For dark mode */
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

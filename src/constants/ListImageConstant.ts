@@ -19,4 +19,8 @@ export const LIST_IMAGE_CONSTANT = {
     name: "not-found",
     url: "/ilustrations/not-found.png",
   },
+  noData: {
+    name: "no-data",
+    url: "/ilustrations/no-data.svg",
+  },
 };
