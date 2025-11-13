@@ -1,8 +1,8 @@
 import Head from "next/head";
+import { LIST_IMAGE_CONSTANT } from "~/constants/ListImageConstant";
 
 type HeaderPageProps = {
   title: string;
-  iconUrl?: string;
 };
 
 export default function HeaderPage(props: HeaderPageProps) {
@@ -10,8 +10,8 @@ export default function HeaderPage(props: HeaderPageProps) {
     <Head>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>{props.title || "Title"}</title>
-      <link rel="icon" href={props.iconUrl} />
+      <link rel="icon" href={LIST_IMAGE_CONSTANT.logo.url} />
+      <title>{"PT Monata Nur Bestari" + " | " + props.title}</title>
     </Head>
   );
 }

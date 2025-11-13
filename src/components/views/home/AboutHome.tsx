@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { LIST_IMAGE_CONSTANT } from "~/constants/ListImageConstant";
 
 const AboutHome = () => {
   return (
@@ -14,11 +15,11 @@ const AboutHome = () => {
       </section>
       <section>
         <Image
-          src="/banner.jpg"
+          src={LIST_IMAGE_CONSTANT.daunKelor.url}
           alt="banner"
           width={720}
           height={200}
-          className="rounded-2xl"
+          className="rounded-2xl object-cover lg:w-[1080px]"
         />
       </section>
     </main>
