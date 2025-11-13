@@ -11,4 +11,12 @@ export const LIST_IMAGE_CONSTANT = {
     name: "daun-kelor",
     url: "/daun-kelor.jpeg",
   },
+  maintenance: {
+    name: "maintenance",
+    url: "/ilustrations/maintenance.png",
+  },
+  notFound: {
+    name: "not-found",
+    url: "/ilustrations/not-found.png",
+  },
 };

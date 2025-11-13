@@ -1,6 +1,10 @@
-import { useRouter } from "next/router";
+import MaintenancePage from "~/components/common/MaintenancePage";
+import LandingPageLayout from "~/components/layouts/LandingPageLayout";
 
 export default function ContactPage() {
-  const router = useRouter();
-  return router.replace("/");
+  return (
+    <LandingPageLayout title="Contacts">
+      <MaintenancePage />
+    </LandingPageLayout>
+  );
 }

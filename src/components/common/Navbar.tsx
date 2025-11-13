@@ -33,9 +33,7 @@ export default function Navbar() {
           <h1 className="text-base font-bold lg:text-xl">
             PT Montana Nur Bestari
           </h1>
-          <span className="text-muted-foreground text-xs font-normal md:text-sm">
-            A company engaged in the field of leaf suppliers
-          </span>
+          <span className="text-muted-foreground text-xs font-normal md:text-sm"></span>
         </div>
       </section>
 
