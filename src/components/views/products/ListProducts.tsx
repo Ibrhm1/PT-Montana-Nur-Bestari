@@ -56,7 +56,7 @@ export default function ListProducts() {
                       alt={item.name_product}
                       width={200}
                       height={400}
-                      className="h-80 w-full rounded-lg object-cover"
+                      className="h-96 w-full rounded-lg object-center"
                       loading="lazy"
                     />
                   </CardHeader>

@@ -13,7 +13,7 @@ export default function LandingPageLayout(props: LandingPageLayoutProps) {
     <>
       <HeaderPage title={props.title} />
       <Navbar />
-      <section>{props.children}</section>
+      <section className="min-h-screen">{props.children}</section>
       <Footer />
     </>
   );

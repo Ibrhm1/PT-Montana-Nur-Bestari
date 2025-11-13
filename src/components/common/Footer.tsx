@@ -5,8 +5,6 @@ import { LIST_IMAGE_CONSTANT } from "~/constants/ListImageConstant";
 import listProducts from "~/data/products.json";
 import { Separator } from "../ui/separator";
 
-type ListProductsType = string[];
-
 export default function Footer() {
   return (
     <footer
@@ -63,6 +61,7 @@ export default function Footer() {
                   <contact.icon size={16} />
                   <Link
                     href={contact?.href || " "}
+                    target="_blank"
                     className="text-sm lg:text-base"
                   >
                     {contact.info}

@@ -31,7 +31,6 @@ export default function DialogDetailProduct(props: DialogDetailProductProps) {
 
   return (
     <Dialog
-      modal
       open={props.openDialogDetailProduct}
       onOpenChange={() =>
         props.setOpenChangeDialogDetailProduct &&
@@ -39,7 +38,7 @@ export default function DialogDetailProduct(props: DialogDetailProductProps) {
       }
     >
       <DialogContent
-        className="max-h-screen overflow-y-auto p-4 sm:max-w-[425px]"
+        className="my-2 max-h-screen overflow-y-auto p-4 sm:max-w-[425px]"
         showCloseButton={false}
       >
         <DialogHeader>
@@ -48,16 +47,16 @@ export default function DialogDetailProduct(props: DialogDetailProductProps) {
             alt={detailProduct?.name_product || "Product Image"}
             width={200}
             height={400}
-            className="h-72 w-full rounded-lg object-cover lg:h-96"
+            className="h-72 w-full rounded-lg object-center lg:h-96"
           />
         </DialogHeader>
 
-        <section>
+        <section className="space-y-2">
           <h2 className="text-2xl font-semibold">
             {detailProduct?.name_product}
           </h2>
-          <ScrollArea scrollHideDelay={1000} className="h-32 pr-2">
-            <p className="text-muted-foreground text-sm lg:text-base">
+          <ScrollArea scrollHideDelay={1000} className="h-28 pr-2">
+            <p className="text-muted-foreground text-justify text-sm lg:text-base">
               {detailProduct?.description_product ||
                 "No description available."}
             </p>

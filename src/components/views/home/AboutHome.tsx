@@ -4,7 +4,7 @@ import { LIST_IMAGE_CONSTANT } from "~/constants/ListImageConstant";
 
 const AboutHome = () => {
   return (
-    <main className="bg-accent-foreground flex flex-col items-center gap-10 px-2 py-10 md:flex-row md:px-5 lg:px-10">
+    <main className="bg-accent-foreground flex flex-col items-center justify-between gap-10 px-2 py-10 md:flex-row md:px-5 lg:px-10">
       <section className="space-y-4">
         <motion.h1
           className="text-2xl lg:text-4xl"
