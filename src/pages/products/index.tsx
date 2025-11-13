@@ -1,9 +1,6 @@
-import LandingPageLayout from "~/components/layouts/LandingPageLayout";
+import { useRouter } from "next/router";
 
 export default function ProductsPage() {
-  return (
-    <LandingPageLayout title="Our Products">
-      <h1>Products</h1>
-    </LandingPageLayout>
-  );
+  const router = useRouter();
+  return router.replace("/");
 }

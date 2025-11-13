@@ -44,34 +44,39 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <Image
               src={LIST_IMAGE_CONSTANT.logo.url}
-              alt={LIST_IMAGE_CONSTANT.logo.name}
-              width={30}
-              height={20}
+              alt={LIST_IMAGE_CONSTANT.logo.name.split("-")[1]}
+              width={50}  
+              height={30}
               className="aspect-square object-cover"
             />
-            <h1>PT Montana Nur Bestari</h1>
+            <h1 className="text-lg lg:text-xl">PT Montana Nur Bestari</h1>
           </div>
-          <p className="text-sm text-gray-500 transition-colors duration-300 hover:text-white active:text-white">
+
+          <p className="text-sm text-gray-500 transition-colors duration-300 hover:text-white active:text-white lg:text-base">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor a
             neque reprehenderit voluptates officiis! Consequuntur!
           </p>
         </div>
+
         <div className="space-y-3" aria-label="list-products">
-          <h1>Products</h1>
+          <h1 className="text-lg lg:text-xl">Products</h1>
+
           <div className="space-y-2">
             {Array.isArray(listProducts) &&
               listProducts.map((product, index) => (
                 <p
                   key={index}
-                  className="text-sm text-gray-500 transition-colors duration-300 hover:text-white active:text-white"
+                  className="text-sm text-gray-500 transition-colors duration-300 hover:text-white active:text-white lg:text-base"
                 >
                   {product}
                 </p>
               ))}
           </div>
         </div>
+
         <div className="space-y-3" aria-label="contact-info">
-          <h1>Contact</h1>
+          <h1 className="text-lg lg:text-xl">Contact</h1>
+
           <div className="space-y-2">
             {Array.isArray(contactInfo) &&
               contactInfo.map((contact, index) => (
@@ -81,7 +86,7 @@ export default function Footer() {
                   className="flex items-center gap-2 text-gray-500 transition-colors duration-300 hover:text-white active:text-white"
                 >
                   <contact.icon size={16} />
-                  <p id="text-contact" className="text-sm">
+                  <p id="text-contact" className="text-sm lg:text-base">
                     {contact.info}
                   </p>
                 </div>
@@ -89,9 +94,11 @@ export default function Footer() {
           </div>
         </div>
       </section>
+
       <Separator orientation="horizontal" className="bg-gray-700" />
+
       <section>
-        <p className="mt-5 text-center text-xs text-gray-500">
+        <p className="mt-5 text-center text-xs text-gray-500 lg:text-sm">
           &copy; {new Date().getFullYear()} PT Montana Nur Bestari. All rights
           reserved.
         </p>

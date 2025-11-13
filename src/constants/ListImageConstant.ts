@@ -3,10 +3,6 @@ export const LIST_IMAGE_CONSTANT = {
     name: "logo-monata-nur-bestari",
     url: "/design-montana/logo-website.png",
   },
-  footer: {
-    name: "footer",
-    url: "/design-montana/footer.png",
-  },
   banner: {
     name: "banner",
     url: "/banner.jpg",

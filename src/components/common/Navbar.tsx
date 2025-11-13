@@ -1,7 +1,9 @@
 import { Menu } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { LIST_IMAGE_CONSTANT } from "~/constants/ListImageConstant";
 import { NAVBAR_MENU_LISTS } from "~/constants/NavbarConstant";
 import { cn } from "~/lib/utils";
 import { Button } from "../ui/button";
@@ -21,6 +23,12 @@ export default function Navbar() {
   return (
     <nav className="bg-sidebar fixed z-10 flex h-16 w-full items-center justify-between border-b px-2 shadow-xl md:px-5 lg:px-10">
       <section className="flex items-center gap-2">
+        <Image
+          src={LIST_IMAGE_CONSTANT.logo.url}
+          alt={LIST_IMAGE_CONSTANT.logo.name.split("-")[1]}
+          width={40}
+          height={40}
+        />
         <div className="-space-y-1">
           <h1 className="text-base font-bold lg:text-xl">
             PT Montana Nur Bestari

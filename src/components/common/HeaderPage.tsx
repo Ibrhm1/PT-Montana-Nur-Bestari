@@ -6,12 +6,14 @@ type HeaderPageProps = {
 };
 
 export default function HeaderPage(props: HeaderPageProps) {
+  const logo = LIST_IMAGE_CONSTANT.logo;
+
   return (
     <Head>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" href={LIST_IMAGE_CONSTANT.logo.url} />
       <title>{"PT Monata Nur Bestari" + " | " + props.title}</title>
+      <link rel="icon" href={logo.url} sizes="any" />
     </Head>
   );
 }

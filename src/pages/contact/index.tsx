@@ -1,9 +1,6 @@
-import LandingPageLayout from "~/components/layouts/LandingPageLayout";
+import { useRouter } from "next/router";
 
 export default function ContactPage() {
-  return (
-    <LandingPageLayout title="Contact Us">
-      <h1>Contact</h1>
-    </LandingPageLayout>
-  );
+  const router = useRouter();
+  return router.replace("/");
 }

@@ -1,6 +1,7 @@
 import LandingPageLayout from "~/components/layouts/LandingPageLayout";
 import AboutHome from "~/components/views/home/AboutHome";
 import BannerHome from "~/components/views/home/BannerHome";
+import FeaturedProduct from "~/components/views/home/FeaturedProduct";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,10 @@ export default function HomePage() {
 
       <section>
         <AboutHome />
+      </section>
+
+      <section>
+        <FeaturedProduct />
       </section>
     </LandingPageLayout>
   );
