@@ -1,9 +1,8 @@
 import { motion, useScroll } from "motion/react";
-import Image from "next/image";
 import Link from "next/link";
+import CardProduct from "~/components/common/CardProduct";
 import EmptyProduct from "~/components/common/EmptyProduct";
 import { Button } from "~/components/ui/button";
-import { Card, CardContent, CardHeader } from "~/components/ui/card";
 import { NAVBAR_MENU_LISTS } from "~/constants/NavbarConstant";
 import data from "~/data/products.json";
 import { ProductsType } from "~/types/product";
@@ -40,26 +39,7 @@ export default function FeaturedProduct() {
                 }}
                 style={{ scale: scrollYProgress }}
               >
-                <Card className="bg-card h-full -space-y-3 border-0 py-4 shadow-2xl">
-                  <CardHeader className="px-4">
-                    <Image
-                      src={item.image_product as string}
-                      alt={item.name_product as string}
-                      width={200}
-                      height={400}
-                      className="h-96 w-full rounded-lg object-center"
-                      loading="lazy"
-                    />
-                  </CardHeader>
-
-                  <CardContent className="px-4">
-                    <h2 className="text-xl">{item?.name_product}</h2>
-
-                    <p className="text-muted-foreground line-clamp-3 text-xs lg:text-sm">
-                      {item?.description_product || "No description available."}
-                    </p>
-                  </CardContent>
-                </Card>
+                <CardProduct products={item} />
               </motion.div>
             ))
           : null}

@@ -28,6 +28,7 @@ export default function Navbar() {
           alt={LIST_IMAGE_CONSTANT.logo.name.split("-")[1]}
           width={40}
           height={40}
+          className="rounded-md object-cover"
         />
 
         <div className="-space-y-1">

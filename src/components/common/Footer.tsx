@@ -17,17 +17,18 @@ export default function Footer() {
             <Image
               src={LIST_IMAGE_CONSTANT.logo.url}
               alt={LIST_IMAGE_CONSTANT.logo.name.split("-")[1]}
-              width={50}
-              height={30}
-              className="aspect-square object-cover"
+              width={60}
+              height={60}
+              className="aspect-square rounded-xl object-cover"
             />
 
             <h1 className="text-lg lg:text-xl">PT Montana Nur Bestari</h1>
           </div>
 
-          <p className="text-sm text-gray-500 transition-colors duration-300 hover:text-white active:text-white lg:text-base">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor a
-            neque reprehenderit voluptates officiis! Consequuntur!
+          <p className="max-w-3xl text-sm text-gray-500 transition-colors duration-300 hover:text-white active:text-white lg:text-base">
+            We are specializes in the sustainable sourcing and supply of premium
+            quality banana leaves, offering natural and eco friendly solution
+            for the food and packaging industries.
           </p>
         </div>
 

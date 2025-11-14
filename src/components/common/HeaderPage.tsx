@@ -6,7 +6,7 @@ type HeaderPageProps = {
 };
 
 export default function HeaderPage(props: HeaderPageProps) {
-  const logo = LIST_IMAGE_CONSTANT.logo;
+  const logo = LIST_IMAGE_CONSTANT.iconWebsite;
 
   return (
     <Head>

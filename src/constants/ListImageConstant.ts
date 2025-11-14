@@ -1,7 +1,11 @@
 export const LIST_IMAGE_CONSTANT = {
-  logo: {
+  iconWebsite: {
     name: "logo-monata-nur-bestari",
     url: "/design-montana/logo-website.png",
+  },
+  logo: {
+    name: "logo",
+    url: "/design-montana/2.png",
   },
   banner: {
     name: "banner",
@@ -22,5 +26,19 @@ export const LIST_IMAGE_CONSTANT = {
   noData: {
     name: "no-data",
     url: "/ilustrations/no-data.svg",
+  },
+  flagIcon: {
+    indonesia: {
+      name: "flag-indonesia",
+      url: "/ilustrations/indonesia.png",
+    },
+    unitedKingdom: {
+      name: "flag-united-kingdom",
+      url: "/ilustrations/united-kingdom.png",
+    },
+    user: {
+      name: "icon-user",
+      url: "/ilustrations/user.png",
+    },
   },
 };

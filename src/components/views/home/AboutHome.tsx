@@ -26,10 +26,9 @@ const AboutHome = () => {
             transition: { duration: 0.5, delay: 0.2 },
           }}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore autem
-          cupiditate eligendi obcaecati, repellat nihil porro nobis molestias,
-          asperiores culpa quisquam corporis itaque doloremque alias excepturi
-          fuga iure in ut.
+          We are specializes in the sustainable sourcing and supply of premium
+          quality banana leaves, offering natural and eco friendly solution for
+          the food and packaging industries.
         </motion.p>
       </section>
 

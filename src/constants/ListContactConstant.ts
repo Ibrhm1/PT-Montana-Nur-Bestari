@@ -20,7 +20,7 @@ export const LIST_CONTACT_CONSTANT: ContactInfoType[] = [
   },
   {
     icon: Phone,
-    info: "+62 859 5809 6622",
+    info: "+62 859 5809 6623",
     href: "https://wa.me/6287881550169",
   },
   {

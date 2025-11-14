@@ -2,31 +2,26 @@
   {
     "product_id": 1,
     "name_product": "Cassava Leaves",
-    "description_product": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nam, unde iusto reiciendis error illum, facilis doloremque sed odit incidunt dolor ut ab omnis beatae nihil possimus cum rem alias?. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nam, unde iusto reiciendis error illum, facilis doloremque sed odit incidunt dolor ut ab omnis beatae nihil possimus cum rem alias?. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nam, unde iusto reiciendis error illum, facilis doloremque sed odit incidunt dolor ut ab omnis beatae nihil possimus cum rem alias?. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nam, unde iusto reiciendis error illum, facilis doloremque sed odit incidunt dolor ut ab omnis beatae nihil possimus cum rem alias?",
     "image_product": "https://res.cloudinary.com/ddqfwcikf/image/upload/v1763102194/cassava-leaves_cgpnj6.jpg"
   },
   {
     "product_id": 2,
     "name_product": "Papaya Leaves",
-    "description_product": "",
     "image_product": "https://res.cloudinary.com/ddqfwcikf/image/upload/v1763102196/papaya-leaves_b7wasg.jpg"
   },
   {
     "product_id": 3,
     "name_product": "Banana Leaves",
-    "description_product": "",
     "image_product": "https://res.cloudinary.com/ddqfwcikf/image/upload/v1763102193/banana-leaves_d3mvyf.jpg"
   },
   {
     "product_id": 4,
     "name_product": "Moringa Leaves",
-    "description_product": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
     "image_product": "https://res.cloudinary.com/ddqfwcikf/image/upload/v1763102195/moringa-leaves_gtlmsh.jpg"
   },
   {
     "product_id": 5,
     "name_product": "Banana Stem",
-    "description_product": "",
     "image_product": "https://res.cloudinary.com/ddqfwcikf/image/upload/v1763103328/banana-stem_ylpkcy.jpg"
   }
 ]

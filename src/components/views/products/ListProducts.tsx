@@ -1,14 +1,7 @@
 import { motion } from "motion/react";
-import Image from "next/image";
 import { useState } from "react";
+import CardProduct from "~/components/common/CardProduct";
 import EmptyProduct from "~/components/common/EmptyProduct";
-import { Button } from "~/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "~/components/ui/card";
 import data from "~/data/products.json";
 import { ProductsType } from "~/types/product";
 import DialogDetailProduct from "./DialogDetailProduct";
@@ -20,7 +13,7 @@ export default function ListProducts() {
 
   return (
     <main className="px-2 py-20 md:px-5 lg:px-10">
-      <header className="mb-10 space-y-2">
+      <header className="mb-8 space-y-2">
         <motion.h1
           className="text-3xl font-normal"
           animate={{ opacity: [0, 1] }}
@@ -34,9 +27,8 @@ export default function ListProducts() {
           animate={{ opacity: [0, 1] }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. A facere,
-          cupiditate quae vel suscipit expedita asperiores eius id sapiente
-          laudantium.
+          Browse through our extensive collection of products, carefully curated
+          to meet your needs and preferences.
         </motion.p>
       </header>
 
@@ -51,39 +43,12 @@ export default function ListProducts() {
                   delay: (item.product_id as number) * 0.2,
                 }}
               >
-                <Card className="bg-card h-full -space-y-3 border-0 py-4 shadow-2xl">
-                  <CardHeader className="px-4">
-                    <Image
-                      src={item.image_product as string}
-                      alt={item.name_product as string}
-                      width={200}
-                      height={400}
-                      className="h-96 w-full rounded-lg object-center"
-                      loading="lazy"
-                    />
-                  </CardHeader>
-
-                  <CardContent className="h-24 px-4">
-                    <h2 className="text-xl">{item.name_product}</h2>
-
-                    <p className="text-muted-foreground line-clamp-3 text-xs lg:text-sm">
-                      {item.description_product || "No description available."}
-                    </p>
-                  </CardContent>
-
-                  <CardFooter className="px-4">
-                    <Button
-                      className="w-full"
-                      variant="default"
-                      onClick={() => {
-                        setSelectedProductId(item.product_id as number);
-                        setOpenDialogDetailProduct(true);
-                      }}
-                    >
-                      View Details
-                    </Button>
-                  </CardFooter>
-                </Card>
+                <CardProduct
+                  products={item}
+                  showButton
+                  setOpenDialogDetailProduct={setOpenDialogDetailProduct}
+                  setSelectedProductId={setSelectedProductId}
+                />
               </motion.div>
             ))
           : null}
