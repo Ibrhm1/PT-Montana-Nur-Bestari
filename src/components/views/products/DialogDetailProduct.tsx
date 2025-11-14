@@ -28,25 +28,35 @@ export default function DialogDetailProduct(props: DialogDetailProductProps) {
   const [selectedLanguage, setSelectedLanguage] =
     useState<SelectLanguageType>();
 
+  /* set message for chat */
   const [message, setMessage] = useState<string>("");
 
+  /* find product by id from props selectedProductId */
   const detailProduct = data.find(
     (item) => item.product_id === props.selectedProductId,
   );
 
+  /* get chat value by language */
   const { english: ChatEnglish, indonesia: ChatIndonesia } = chatValue(
     detailProduct as ProductsType,
   );
 
+  /* handle close dialog */
   const onOpenChangeDialog = () => {
     setSelectedLanguage(undefined);
     props.setOpenChangeDialogDetailProduct?.(false);
   };
 
+  /* handle select language */
   const handlelanguangeChange = (value: SelectLanguageType) =>
     setSelectedLanguage(value);
 
-  /* fungsi untuk set message berdasarkan pilihan bahasa */
+  /**
+   * handle function for set meesage if language selected
+   * if selectedLanguage is english set message to ChatEnglish.message
+   * if selectedLanguage is indonesia set message to ChatIndonesia.message
+   * return default message if selectedLanguage is undefined
+   */
   const handleSetMessage = (): string => {
     if (selectedLanguage === "english") {
       setMessage(ChatEnglish.message.join("\n"));

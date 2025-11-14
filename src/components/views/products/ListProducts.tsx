@@ -1,3 +1,4 @@
+import { ShoppingCart } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 import CardProduct from "~/components/common/CardProduct";
@@ -46,6 +47,8 @@ export default function ListProducts() {
                 <CardProduct
                   products={item}
                   showButton
+                  titleButton="Order Now"
+                  iconButton={ShoppingCart}
                   setOpenDialogDetailProduct={setOpenDialogDetailProduct}
                   setSelectedProductId={setSelectedProductId}
                 />

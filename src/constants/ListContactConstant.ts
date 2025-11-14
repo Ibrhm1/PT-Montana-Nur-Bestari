@@ -21,7 +21,7 @@ export const LIST_CONTACT_CONSTANT: ContactInfoType[] = [
   {
     icon: Phone,
     info: "+62 859 5809 6623",
-    href: "https://wa.me/6287881550169",
+    href: "https://wa.me/6285958096623",
   },
   {
     icon: Mail,

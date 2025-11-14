@@ -15,6 +15,14 @@ type SelectLanguageProps = {
   handlelanguangeChange: (value: string) => void;
 };
 
+/**
+ * Component for selecting a language option.
+ *
+ * @export
+ * @param {SelectLanguageProps} props
+ * @returns {*}
+ */
+
 export default function SelectLanguage(props: SelectLanguageProps) {
   return (
     <Select

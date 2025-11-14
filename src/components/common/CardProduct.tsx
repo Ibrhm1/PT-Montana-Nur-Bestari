@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ElementType } from "react";
 import { Card, CardContent, CardHeader } from "~/components/ui/card";
 import { ProductsType } from "~/types/product";
 import { Button } from "../ui/button";
@@ -6,6 +7,8 @@ import { Button } from "../ui/button";
 type CardProductType = {
   products: ProductsType;
   showButton?: boolean;
+  titleButton?: string;
+  iconButton?: ElementType;
   setSelectedProductId?: (id: number) => void;
   setOpenDialogDetailProduct?: (open: boolean) => void;
 };
@@ -41,7 +44,8 @@ export default function CardProduct(props: CardProductType) {
             variant="default"
             onClick={handleOnClickButton}
           >
-            View Details
+            {props.iconButton && <props.iconButton className="size-5" />}
+            {props.titleButton || "Detail Produk"}
           </Button>
         </CardContent>
       )}
