@@ -37,7 +37,6 @@ const AboutHome = () => {
           opacity: [0, 1],
           transition: { duration: 0.5, delay: 0.4 },
         }}
-        viewport={{ margin: "-100px" }}
       >
         <Image
           src={LIST_IMAGE_CONSTANT.daunKelor.url}
