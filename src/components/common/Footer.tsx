@@ -61,13 +61,17 @@ export default function Footer() {
                 >
                   <contact.icon size={16} />
 
-                  <Link
-                    href={contact?.href || " "}
-                    target="_blank"
-                    className="text-sm lg:text-base"
-                  >
-                    {contact.info}
-                  </Link>
+                  {contact.href ? (
+                    <Link
+                      href={contact?.href}
+                      target="_blank"
+                      className="text-sm lg:text-base"
+                    >
+                      {contact.info}
+                    </Link>
+                  ) : (
+                    <p className="text-sm lg:text-base">{contact.info}</p>
+                  )}
                 </div>
               ))}
           </div>
