@@ -1,40 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# **Website Rempah (PT Montana Nur Bestari)**
 
-## Getting Started
+Deskripsi singkat: situs marketing dan katalog produk rempah berbasis Next.js, dibuat untuk menampilkan produk, informasi kontak, dan halaman statis sederhana.
 
-First, run the development server:
+**Ringkasan**
+
+- **Proyek:** Website frontend untuk PT Montana Nur Bestari (situs katalog/landing)
+- **Stack:** `Next.js` 16, `React` 19, `Tailwind CSS`, TypeScript
+- **Tujuan:** Menyajikan katalog produk, halaman landing, dan informasi kontak dengan antarmuka ringan dan statis.
+
+**Fitur Utama**
+
+- Halaman landing dengan banner dan bagian About
+- Daftar produk (dari `data/products.json`) dan dialog detail produk
+- Halaman kontak dengan informasi perusahaan
+- Layout dan komponen UI berbasis Tailwind + komponen dari `src/components` dan `src/ui`
+
+**Struktur Project (ringkasan)**
+
+- `src/pages` : halaman Next.js (`index`, `products`, `contact`, `404`)
+- `src/components` : komponen UI dan layout yang dipakai di halaman
+- `src/ui` : komponen UI generik (button, card, dialog, dll.)
+- `src/data/products.json` : data produk contoh yang ditampilkan pada katalog
+- `public/` : aset statis (gambar produk, ilustrasi, dsb.)
+
+**Persyaratan**
+
+- Node.js (rekomendasi v18+)
+- npm (atau `pnpm`/`yarn` sesuai preferensi)
+
+**Instalasi & Menjalankan Secara Lokal**
+Jalankan perintah di terminal (bash) dari root proyek:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Akses aplikasi di `http://localhost:3000` saat `npm run dev` berjalan.
+- Untuk build produksi dan menjalankan build:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm run start
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+**Skrip Penting (dari `package.json`)**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- `npm run dev` : jalankan Next.js dalam mode development
+- `npm run build` : buat build produksi
+- `npm run start` : jalankan server produksi setelah build
+- `npm run lint` : jalankan ESLint
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Konfigurasi & Catatan**
 
-## Learn More
+- Tidak ada variabel lingkungan (env) sensitif yang ditemukan di repo ini. Jika Anda menambahkan API atau layanan eksternal, buat file `.env` dan jangan commit.
+- Data produk demo ada di `src/data/products.json` dan gambar terkait ada di `public/products`.
+- Proyek menggunakan Tailwind CSS (konfigurasi ada di `postcss.config.mjs` dan file terkait).
 
-To learn more about Next.js, take a look at the following resources:
+**Menambahkan/Mengubah Konten**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+- Halaman Next.js berada di `src/pages`.
+- Komponen UI berada di `src/components` dan `src/ui` — ubah komponen tersebut untuk merefleksikan perubahan tampilan.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Contributing**
 
-## Deploy on Vercel
+- Fork dan buat branch baru untuk perubahan fitur atau perbaikan bug.
+- Buat pull request dengan deskripsi perubahan yang jelas.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Lisensi**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- Tidak ada lisensi yang ditetapkan pada repo ini. Tambahkan file `LICENSE` jika ingin menetapkan lisensi (mis. MIT).
+
+**Kontak / Informasi Tambahan**
+
+- Untuk pertanyaan atau permintaan fitur, gunakan issue tracker pada repository atau hubungi pemilik proyek.
+
+---
+
+File ini dibuat/diupdate otomatis oleh asisten pengembangan. Perlu bantuan menambahkan badge CI, menyiapkan deploy, atau menulis dokumentasi komponen? Beri tahu saya dan saya bantu.
