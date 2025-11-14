@@ -13,7 +13,9 @@ export default function LandingPageLayout(props: LandingPageLayoutProps) {
     <>
       <HeaderPage title={props.title} />
       <Navbar />
-      <section className="min-h-screen">{props.children}</section>
+      <main className="mx-auto min-h-screen 2xl:container">
+        {props.children}
+      </main>
       <Footer />
     </>
   );

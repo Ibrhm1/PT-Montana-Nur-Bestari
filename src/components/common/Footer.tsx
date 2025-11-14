@@ -59,6 +59,7 @@ export default function Footer() {
                   className="flex items-center gap-2 text-gray-500 transition-colors duration-300 hover:text-white active:text-white"
                 >
                   <contact.icon size={16} />
+
                   <Link
                     href={contact?.href || " "}
                     target="_blank"

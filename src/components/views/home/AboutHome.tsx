@@ -8,13 +8,9 @@ const AboutHome = () => {
       <section className="space-y-4">
         <motion.h1
           className="text-2xl lg:text-4xl"
-          initial={{
-            opacity: 0,
-            x: -100,
-          }}
           whileInView={{
-            opacity: 1,
-            x: 0,
+            opacity: [0, 1],
+            x: [-100, 0],
             transition: { duration: 0.5 },
           }}
           viewport={{ margin: "-50px" }}
@@ -24,13 +20,9 @@ const AboutHome = () => {
 
         <motion.p
           className="lg:text-lg"
-          initial={{
-            opacity: 0,
-            x: -100,
-          }}
           whileInView={{
-            opacity: 1,
-            x: 0,
+            opacity: [0, 1],
+            x: [-100, 0],
             transition: { duration: 0.5, delay: 0.2 },
           }}
         >
@@ -42,8 +34,10 @@ const AboutHome = () => {
       </section>
 
       <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5, delay: 0.4 } }}
+        whileInView={{
+          opacity: [0, 1],
+          transition: { duration: 0.5, delay: 0.4 },
+        }}
         viewport={{ margin: "-100px" }}
       >
         <Image

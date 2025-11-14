@@ -29,11 +29,14 @@ export default function Navbar() {
           width={40}
           height={40}
         />
+
         <div className="-space-y-1">
-          <h1 className="text-base font-bold lg:text-xl">
+          <Link href="/" className="text-base font-bold lg:text-xl">
             PT Montana Nur Bestari
-          </h1>
-          <span className="text-muted-foreground text-xs font-normal md:text-sm"></span>
+          </Link>
+          {/* 
+            <span className="text-muted-foreground text-xs font-normal md:text-sm">A company engaged in the field of leaf suppliers</span>
+           */}
         </div>
       </section>
 
@@ -42,15 +45,18 @@ export default function Navbar() {
           <SheetTrigger asChild>
             <Menu />
           </SheetTrigger>
+
           <SheetContent>
             <SheetHeader>
               <SheetTitle className="text-sm">
                 PT Montana Nur Bestari
               </SheetTitle>
+
               <SheetDescription className="text-xs">
                 A company engaged in the field of leaf suppliers
               </SheetDescription>
             </SheetHeader>
+
             <div className="flex flex-col gap-3 px-4">
               {NAVBAR_MENU_LISTS.map((menu, menuIndex) => (
                 <Link

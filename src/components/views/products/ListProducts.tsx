@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
+import EmptyProduct from "~/components/common/EmptyProduct";
 import { Button } from "~/components/ui/button";
 import {
   Card,
@@ -22,16 +23,15 @@ export default function ListProducts() {
       <header className="mb-10 space-y-2">
         <motion.h1
           className="text-3xl font-normal"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: [0, 1] }}
           transition={{ duration: 0.8 }}
         >
           Product List
         </motion.h1>
+
         <motion.p
           className="max-w-2xl text-gray-600"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: [0, 1] }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. A facere,
@@ -45,15 +45,17 @@ export default function ListProducts() {
           ? data.map((item: ProductsType) => (
               <motion.div
                 key={item.product_id}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: item.product_id * 0.2 }}
+                animate={{ opacity: [0, 1] }}
+                transition={{
+                  duration: 0.6,
+                  delay: (item.product_id as number) * 0.2,
+                }}
               >
                 <Card className="bg-card h-full -space-y-3 border-0 py-4 shadow-2xl">
                   <CardHeader className="px-4">
                     <Image
-                      src={item.image_product}
-                      alt={item.name_product}
+                      src={item.image_product as string}
+                      alt={item.name_product as string}
                       width={200}
                       height={400}
                       className="h-96 w-full rounded-lg object-center"
@@ -63,6 +65,7 @@ export default function ListProducts() {
 
                   <CardContent className="h-24 px-4">
                     <h2 className="text-xl">{item.name_product}</h2>
+
                     <p className="text-muted-foreground line-clamp-3 text-xs lg:text-sm">
                       {item.description_product || "No description available."}
                     </p>
@@ -73,7 +76,7 @@ export default function ListProducts() {
                       className="w-full"
                       variant="default"
                       onClick={() => {
-                        setSelectedProductId(item.product_id);
+                        setSelectedProductId(item.product_id as number);
                         setOpenDialogDetailProduct(true);
                       }}
                     >
@@ -86,6 +89,14 @@ export default function ListProducts() {
           : null}
       </section>
 
+      {/* empty product component if data is empty */}
+      <EmptyProduct
+        data={data}
+        description="No product has been added yet."
+        title="Product list is empty."
+      />
+
+      {/* dialog detail product component if product id is selected */}
       <DialogDetailProduct
         selectedProductId={selectedProductId}
         openDialogDetailProduct={openDialogDetailProduct}

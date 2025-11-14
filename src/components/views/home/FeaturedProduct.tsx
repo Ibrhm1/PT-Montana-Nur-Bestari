@@ -1,16 +1,9 @@
 import { motion, useScroll } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+import EmptyProduct from "~/components/common/EmptyProduct";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardHeader } from "~/components/ui/card";
-import {
-  Empty,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "~/components/ui/empty";
-import { LIST_IMAGE_CONSTANT } from "~/constants/ListImageConstant";
 import { NAVBAR_MENU_LISTS } from "~/constants/NavbarConstant";
 import data from "~/data/products.json";
 import { ProductsType } from "~/types/product";
@@ -24,11 +17,11 @@ export default function FeaturedProduct() {
     <main className="px-2 py-10 md:px-5 lg:px-10">
       <motion.header
         className="mb-5 w-full space-y-2 text-center"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: [0, 1], y: [-20, 0] }}
         transition={{ duration: 0.9 }}
       >
         <h1 className="text-2xl font-normal md:text-3xl">Featured Product </h1>
+
         <p className="text-xs text-gray-400 md:text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
           necessitatibus?
@@ -37,29 +30,33 @@ export default function FeaturedProduct() {
 
       <section className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
         {Array.isArray(data)
-          ? data.map((item: ProductsType) => (
+          ? data.slice(0, 4).map((item: ProductsType) => (
               <motion.div
-                key={item.product_id}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: item.product_id * 0.2 }}
+                key={item?.product_id}
+                whileInView={{ opacity: [0, 1], y: [20, 0] }}
+                transition={{
+                  duration: 0.6,
+                  delay: (item.product_id as number) * 0.2,
+                }}
                 style={{ scale: scrollYProgress }}
               >
                 <Card className="bg-card h-full -space-y-3 border-0 py-4 shadow-2xl">
                   <CardHeader className="px-4">
                     <Image
-                      src={item.image_product}
-                      alt={item.name_product}
+                      src={item.image_product as string}
+                      alt={item.name_product as string}
                       width={200}
                       height={400}
                       className="h-96 w-full rounded-lg object-center"
                       loading="lazy"
                     />
                   </CardHeader>
+
                   <CardContent className="px-4">
-                    <h2 className="text-xl">{item.name_product}</h2>
+                    <h2 className="text-xl">{item?.name_product}</h2>
+
                     <p className="text-muted-foreground line-clamp-3 text-xs lg:text-sm">
-                      {item.description_product || "No description available."}
+                      {item?.description_product || "No description available."}
                     </p>
                   </CardContent>
                 </Card>
@@ -68,29 +65,15 @@ export default function FeaturedProduct() {
           : null}
       </section>
 
-      {Array.isArray(data) && data.length === 0 && (
-        <Empty className="border- border shadow-2xl">
-          <EmptyHeader>
-            <EmptyMedia variant="default">
-              <Image
-                src={LIST_IMAGE_CONSTANT.noData.url}
-                alt={LIST_IMAGE_CONSTANT.noData.name}
-                width={150}
-                height={150}
-              />
-            </EmptyMedia>
-            <EmptyTitle className="capitalize">
-              featured products are not yet available
-            </EmptyTitle>
-            <EmptyDescription>No product has been added yet.</EmptyDescription>
-          </EmptyHeader>
-        </Empty>
-      )}
+      <EmptyProduct
+        data={data}
+        title="featured products are not yet available."
+        description="No product has been added yet."
+      />
 
       <motion.footer
         className="mt-5 w-full text-center"
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        whileInView={{ opacity: [0, 1], scale: [0.9, 1] }}
         transition={{ duration: 0.2 }}
       >
         <Button variant="default" asChild size="lg">
