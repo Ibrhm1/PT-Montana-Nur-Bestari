@@ -22,7 +22,7 @@ export default function FeaturedProduct() {
         <h1 className="text-2xl font-normal md:text-3xl">Featured Product</h1>
       </motion.header>
 
-      <section className="mx-auto w-80">
+      <section className="mx-auto w-full max-w-96 md:w-80">
         {Array.isArray(data)
           ? data.slice(0, 1).map((item: ProductsType) => (
               <motion.div
@@ -47,7 +47,7 @@ export default function FeaturedProduct() {
       />
 
       <motion.footer
-        className="mt-5 w-full text-center"
+        className="mt-5 text-center"
         whileInView={{ opacity: [0, 1], scale: [0.9, 1] }}
         transition={{ duration: 0.2 }}
       >

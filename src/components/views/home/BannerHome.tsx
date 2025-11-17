@@ -5,16 +5,17 @@ import { Card, CardContent } from "~/components/ui/card";
 
 export default function BannerHome() {
   return (
-    <main className="flex h-[90vh] w-full items-center justify-center bg-[url('/banner.jpg')] bg-cover bg-center bg-no-repeat shadow-lg">
+    <main className="flex h-[90vh] w-full items-center justify-center bg-[url('/banner.jpeg')] bg-cover bg-center bg-no-repeat shadow-lg">
       <Card className="bg-sidebar m-2 w-full py-10 text-center opacity-90 shadow-2xl md:m-0 md:w-2/4">
         <CardContent className="w-full md:space-y-4">
           <div className="space-y-2">
             <motion.h1
-              className="text-xl font-bold uppercase lg:text-2xl"
+              className="text-lg font-bold uppercase lg:text-xl"
               animate={{ y: [20, 0], opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
             >
-              Supplying Fresh Banana, Cassava, Moringa & Papaya Leaves
+              Supplying fresh banana leaves, cassava leaves, Moringa leaves,
+              papaya leaves, and banana stem
             </motion.h1>
 
             <motion.p

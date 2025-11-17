@@ -9,7 +9,7 @@ export const LIST_IMAGE_CONSTANT = {
   },
   banner: {
     name: "banner",
-    url: "/banner.jpg",
+    url: "/banner1.jpeg",
   },
   daunKelor: {
     name: "daun-kelor",
