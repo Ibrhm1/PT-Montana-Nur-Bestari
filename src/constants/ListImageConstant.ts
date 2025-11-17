@@ -15,6 +15,10 @@ export const LIST_IMAGE_CONSTANT = {
     name: "daun-kelor",
     url: "/daun-kelor.jpeg",
   },
+  daunPisang: {
+    name: "daun-pisang",
+    url: "/daun-pisang.jpg",
+  },
   maintenance: {
     name: "maintenance",
     url: "/ilustrations/maintenance.png",

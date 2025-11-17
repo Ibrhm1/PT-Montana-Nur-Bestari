@@ -51,7 +51,7 @@ export const chatValue = (detailProduct: ProductsType) => {
     },
     english: {
       message: [
-        "hello, I would like to inquire about this produc:",
+        "Hello, I would like to inquire about this product:",
         `- *${detailProduct?.name_product}*`,
         "Could you please let me know the price and the available stock? Thank you.",
       ],

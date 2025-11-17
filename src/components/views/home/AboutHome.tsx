@@ -28,7 +28,9 @@ const AboutHome = () => {
         >
           We are specializes in the sustainable sourcing and supply of premium
           quality banana leaves, offering natural and eco friendly solution for
-          the food and packaging industries.
+          the food and packaging industries. We also supplying cassava & moringa
+          leaves which good for healthy, and stem banana which has many
+          benefits
         </motion.p>
       </section>
 
@@ -39,8 +41,8 @@ const AboutHome = () => {
         }}
       >
         <Image
-          src={LIST_IMAGE_CONSTANT.daunKelor.url}
-          alt={LIST_IMAGE_CONSTANT.daunKelor.name}
+          src={LIST_IMAGE_CONSTANT.daunPisang.url}
+          alt={LIST_IMAGE_CONSTANT.daunPisang.name}
           width={720}
           height={200}
           className="rounded-2xl object-cover lg:w-[1080px]"

@@ -19,17 +19,12 @@ export default function FeaturedProduct() {
         whileInView={{ opacity: [0, 1], y: [-20, 0] }}
         transition={{ duration: 0.9 }}
       >
-        <h1 className="text-2xl font-normal md:text-3xl">Featured Product </h1>
-
-        <p className="text-xs text-gray-400 md:text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
-          necessitatibus?
-        </p>
+        <h1 className="text-2xl font-normal md:text-3xl">Featured Product</h1>
       </motion.header>
 
-      <section className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
+      <section className="mx-auto w-80">
         {Array.isArray(data)
-          ? data.slice(0, 4).map((item: ProductsType) => (
+          ? data.slice(0, 1).map((item: ProductsType) => (
               <motion.div
                 key={item?.product_id}
                 whileInView={{ opacity: [0, 1], y: [20, 0] }}

@@ -22,15 +22,6 @@ export default function ListProducts() {
         >
           Product List
         </motion.h1>
-
-        <motion.p
-          className="max-w-2xl text-gray-600"
-          animate={{ opacity: [0, 1] }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
-          Browse through our extensive collection of products, carefully curated
-          to meet your needs and preferences.
-        </motion.p>
       </header>
 
       <section className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
