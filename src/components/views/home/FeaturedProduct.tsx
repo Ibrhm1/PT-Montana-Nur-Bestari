@@ -1,60 +1,95 @@
-import { motion, useScroll } from "motion/react";
+import { motion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
-import CardProduct from "~/components/common/CardProduct";
 import EmptyProduct from "~/components/common/EmptyProduct";
 import { Button } from "~/components/ui/button";
 import { NAVBAR_MENU_LISTS } from "~/constants/NavbarConstant";
 import data from "~/data/products.json";
-import { ProductsType } from "~/types/product";
 
 export default function FeaturedProduct() {
-  const { scrollYProgress } = useScroll({
-    offset: ["start end", "center end"],
-  });
-
   return (
     <main className="px-2 py-10 md:px-5 lg:px-10">
-      <motion.header
-        className="mb-5 w-full space-y-2 text-center"
-        whileInView={{ opacity: [0, 1], y: [-20, 0] }}
-        transition={{ duration: 0.9 }}
-      >
-        <h1 className="text-2xl font-normal md:text-3xl">Featured Product</h1>
-      </motion.header>
+      {Array.isArray(data) &&
+        data.slice(0, 1).map((item) => (
+          <section
+            key={item.product_id}
+            className="flex flex-col items-start justify-center md:flex-row md:gap-10"
+          >
+            <motion.div
+              whileInView={{
+                x: [-50, 0],
+                opacity: [0, 1],
+                transition: { duration: 0.5 },
+              }}
+              className="mx-auto md:m-0"
+            >
+              <Image
+                src={item.image_product}
+                alt={item.name_product}
+                width={320}
+                height={200}
+                className="mx-auto rounded-xl"
+                loading="lazy"
+              />
+            </motion.div>
 
-      <section className="mx-auto w-full max-w-96 md:w-80">
-        {Array.isArray(data)
-          ? data.slice(0, 1).map((item: ProductsType) => (
-              <motion.div
-                key={item?.product_id}
-                whileInView={{ opacity: [0, 1], y: [20, 0] }}
-                transition={{
-                  duration: 0.6,
-                  delay: (item.product_id as number) * 0.2,
+            <div className="space-y-2 py-5 md:w-1/2 md:space-y-3 md:py-10 lg:space-y-4">
+              <motion.p
+                whileInView={{
+                  y: [-20, 0],
+                  opacity: [0, 1],
+                  transition: { duration: 0.4, delay: 0.3 },
                 }}
-                style={{ scale: scrollYProgress }}
+                className="text-center text-xl font-normal md:text-start"
               >
-                <CardProduct products={item} />
-              </motion.div>
-            ))
-          : null}
-      </section>
+                Featured Product
+              </motion.p>
+
+              <motion.h1
+                whileInView={{
+                  y: [-20, 0],
+                  opacity: [0, 1],
+                  transition: { duration: 0.4, delay: 0.4 },
+                }}
+                className="text-3xl lg:text-4xl"
+              >
+                {item.name_product}
+              </motion.h1>
+
+              <motion.p
+                whileInView={{
+                  y: [-20, 0],
+                  opacity: [0, 1],
+                  transition: { duration: 0.4, delay: 0.5 },
+                }}
+                className="text-justify text-sm text-gray-500 lg:text-base"
+              >
+                {item?.description}
+              </motion.p>
+
+              <motion.footer
+                whileInView={{
+                  y: [-20, 0],
+                  opacity: [0, 1],
+                  transition: { duration: 0.4, delay: 0.6 },
+                }}
+                className="mt-5 text-center md:text-start"
+              >
+                <Button asChild variant="secondary">
+                  <Link href={NAVBAR_MENU_LISTS[1].href}>
+                    Explorer More Products
+                  </Link>
+                </Button>
+              </motion.footer>
+            </div>
+          </section>
+        ))}
 
       <EmptyProduct
         data={data}
         title="featured products are not yet available."
         description="No product has been added yet."
       />
-
-      <motion.footer
-        className="mt-5 text-center"
-        whileInView={{ opacity: [0, 1], scale: [0.9, 1] }}
-        transition={{ duration: 0.2 }}
-      >
-        <Button variant="default" asChild size="lg">
-          <Link href={NAVBAR_MENU_LISTS[1].href}>Explorer Products</Link>
-        </Button>
-      </motion.footer>
     </main>
   );
 }
