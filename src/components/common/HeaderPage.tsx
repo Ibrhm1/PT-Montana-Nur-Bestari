@@ -12,7 +12,7 @@ export default function HeaderPage(props: HeaderPageProps) {
     <Head>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>{"PT Monata Nur Bestari" + " | " + props.title}</title>
+      <title>{"PT Montana Nur Bestari" + " | " + props.title}</title>
       <link rel="icon" href={logo.url} sizes="any" />
     </Head>
   );

@@ -30,7 +30,7 @@ const AboutHome = () => {
           quality banana leaves, offering natural and eco friendly solution for
           the food and packaging industries. We also supplying cassava & moringa
           leaves which good for healthy, and stem banana which has many
-          benefits
+          benefits.
         </motion.p>
       </section>
 

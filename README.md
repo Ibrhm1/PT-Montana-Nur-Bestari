@@ -1,6 +1,6 @@
-# **Website Rempah (PT Montana Nur Bestari)**
+# **🌐Website Rempah (PT Montana Nur Bestari)**
 
-Deskripsi singkat: situs marketing dan katalog produk rempah, dibuat untuk menampilkan produk, informasi kontak, dan halaman statis sederhana.
+Situs marketing dan katalog produk rempah, dibuat untuk menampilkan produk, informasi kontak, dan halaman statis sederhana.
 
 ## **Ringkasan**
 
@@ -8,18 +8,22 @@ Deskripsi singkat: situs marketing dan katalog produk rempah, dibuat untuk menam
 - **Stack:** `Next.js` 16, `React` 19, `Tailwind CSS`, TypeScript
 - **Tujuan:** Menyajikan katalog produk, halaman landing, dan informasi kontak dengan antarmuka ringan dan statis.
 
-## **Fitur Utama**
-
-- Halaman kontak dengan informasi perusahaan
-
-## **Persyaratan**
-
-- Node.js (rekomendasi v18+)
-- npm (atau `pnpm`/`yarn` sesuai preferensi)
-
 ## **Instalasi & Menjalankan Secara Lokal**
 
-Jalankan perintah di terminal (bash) dari root proyek:
+1. Pastikan `Node.js` (versi 18 atau lebih baru) dan `npm` sudah terinstal.
+2. Clone repositori ini:
+
+```bash
+git clone https://github.com/Ibrhm1/PT-Montana-Nur-Bestari.git
+```
+
+3. Masuk ke direktori proyek:
+
+```bash
+cd PT-Montana-Nur-Bestari
+```
+
+4. Install dependensi dan jalankan server development:
 
 ```bash
 npm install
