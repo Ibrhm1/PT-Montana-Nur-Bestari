@@ -1,0 +1,28 @@
+[
+  {
+    "product_id": 1,
+    "name_product": "Banana Leaves",
+    "description": "Banana leaves are harvested from stone banana trees and kepok banana trees which are thick and softer texture, not easly torn, more resistent on boiling and have more taste. They are commonly used in cooking and food presentation in many cultures around the world. The leaves impart a subtle flavor to the food and are often used as natural wrappers for steaming or grilling dishes. In addition to their culinary uses, banana leaves are also used for decorative purposes and in traditional ceremonies.",
+    "image_product": "https://res.cloudinary.com/ddqfwcikf/image/upload/v1763102193/banana-leaves_d3mvyf.jpg"
+  },
+  {
+    "product_id": 2,
+    "name_product": "Cassava Leaves",
+    "image_product": "https://res.cloudinary.com/ddqfwcikf/image/upload/v1763102194/cassava-leaves_cgpnj6.jpg"
+  },
+  {
+    "product_id": 3,
+    "name_product": "Papaya Leaves",
+    "image_product": "https://res.cloudinary.com/ddqfwcikf/image/upload/v1763102196/papaya-leaves_b7wasg.jpg"
+  },
+  {
+    "product_id": 4,
+    "name_product": "Moringa Leaves",
+    "image_product": "https://res.cloudinary.com/ddqfwcikf/image/upload/v1763102195/moringa-leaves_gtlmsh.jpg"
+  },
+  {
+    "product_id": 5,
+    "name_product": "Banana Stem",
+    "image_product": "https://res.cloudinary.com/ddqfwcikf/image/upload/v1763103328/banana-stem_ylpkcy.jpg"
+  }
+]
