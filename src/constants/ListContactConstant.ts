@@ -20,6 +20,7 @@ export const LIST_CONTACT_CONSTANT: ContactInfoType[] = [
   },
   {
     icon: Phone,
+<<<<<<< HEAD
     info: "",
     href: "",
   },
@@ -27,5 +28,14 @@ export const LIST_CONTACT_CONSTANT: ContactInfoType[] = [
     icon: Mail,
     info: "",
     href: "",
+=======
+    info: "+62 859 5809 6623",
+    href: "https://wa.me/6285958096623",
+  },
+  {
+    icon: Mail,
+    info: "montananurbestari@gmail.com",
+    href: "mailto:montananurbestari@gmail.com",
+>>>>>>> 388f317ad9400cb7eb786188c4f19dd1ea27164c
   },
 ];
